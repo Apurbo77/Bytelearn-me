@@ -12,6 +12,7 @@ interface StudentDashboardProps {
         location?: string | null;
         lat?: number | null;
         lon?: number | null;
+        share_email?: boolean;
     } | null;
     data?: {
         enrolledCourses?: any[];

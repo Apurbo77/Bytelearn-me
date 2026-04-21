@@ -10,7 +10,7 @@ class ApiClient {
 
     constructor(config?: ApiClientConfig) {
         const baseURL =
-            import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+            (import.meta as any).env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
 
         this.client = axios.create({
             baseURL,
