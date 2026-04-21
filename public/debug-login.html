@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Login Test</title>
+</head>
+<body>
+    <h1>Debug Login Test</h1>
+    <form action="/debug-login" method="POST">
+        <input type="hidden" name="_token" value="">
+        <input type="email" name="email" placeholder="test@example.com" value="test@example.com">
+        <input type="password" name="password" placeholder="password123" value="password123">
+        <button type="submit">Test Login</button>
+    </form>
+
+    <hr>
+
+    <h2>Or test with curl:</h2>
+    <pre>curl -X POST http://localhost:8000/debug-login -d "email=test@example.com&password=password123" -H "X-CSRF-TOKEN: your_token"</pre>
+</body>
+</html>

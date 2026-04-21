@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login</title>
+</head>
+<body>
+    <h1>Manual Login Test</h1>
+    <form action="/manual-login" method="POST">
+        <input type="hidden" name="_token" id="csrf-token" value="">
+        <input type="email" name="email" value="student@test.com" required>
+        <input type="password" name="password" value="password123" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        // Get CSRF token from server
+        fetch('/test-auth')
+            .then(r => r.json())
+            .then(data => {
+                console.log('Session data:', data);
+            });
+    </script>
+</body>
+</html>

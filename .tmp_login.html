@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="1S7W4ngsAewwn5fmGisz46val8izMGGMdOjjsprT">
+    <title>Login - ByteLearn</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Vite enabled -->
+<link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-PdgMJN81.css" /><link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-CG92-drw.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8000/build/assets/app-BG1ZlsRw.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-PdgMJN81.css" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-CG92-drw.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-BG1ZlsRw.js"></script>
+
+</head>
+
+<body>
+
+<!-- React App Mount Point -->
+<div id="app"></div>
+
+<!-- Blade Content -->
+
+<!-- Initial Data from Laravel -->
+<script id="app-data" type="application/json">
+    {"page":"home","user":null}</script>
+
+<script>
+    // Override initial data for login page
+    document.getElementById('app-data').textContent = JSON.stringify({
+        page: 'login',
+        user: null,
+        error: ""
+    });
+</script>
+
+</body>
+</html>
