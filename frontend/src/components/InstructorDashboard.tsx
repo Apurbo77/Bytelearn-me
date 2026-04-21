@@ -42,8 +42,8 @@ export function InstructorDashboard({ onNavigate, user, data }: InstructorDashbo
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
                         <div>
-                            <h1 className="text-3xl font-bold mb-2">Welcome, {userName}!</h1>
-                            <p className="text-gray-600">Manage your courses and track student progress</p>
+                            <h1 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 text-gray-900">Welcome, {userName}!</h1>
+                            <p className="text-sm sm:text-base text-gray-600">Manage your courses and track student progress</p>
                         </div>
                         <a
                             href="/instructor/courses/create"
@@ -55,7 +55,7 @@ export function InstructorDashboard({ onNavigate, user, data }: InstructorDashbo
                     </div>
 
                     {/* Stats Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {stats.map((stat, index) => (
                             <div key={index} className="bg-gray-50 rounded-lg p-4">
                                 <div className={`${stat.color} rounded-lg p-2 w-fit mb-3`}>
@@ -80,9 +80,9 @@ export function InstructorDashboard({ onNavigate, user, data }: InstructorDashbo
                     <div className="lg:col-span-2 space-y-8">
                         {/* My Courses */}
                         <section>
-                            <div className="flex items-center justify-between mb-6">
-                                <h2 className="text-2xl font-bold">My Courses</h2>
-                                <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+                                <h2 className="text-xl sm:text-2xl font-bold">My Courses</h2>
+                                <select className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     <option>All Courses</option>
                                     <option>Published</option>
                                     <option>Draft</option>
